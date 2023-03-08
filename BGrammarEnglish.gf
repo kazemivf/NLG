@@ -1,9 +1,11 @@
 concrete BGrammarEnglish of BGrammar = {
  lincat 
     Predicate = Str; 
-    Expr = Str ;          
+    Expr = Str ; 
+    NPhrase = Str ;
 
   lin 
+    NP n1 n2 = mkNP (Det n1) ( "of" ++ n2 );
     Not e1 = "not " ++ e1 ;
     Element e1 e2 = e1 ++(" is "|" is an element of ") ++ e2 ;
     Eq e1 e2 = e1 ++ " is " ++ e2 ;
