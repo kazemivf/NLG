@@ -34,5 +34,7 @@ concrete BGrammarEnglish of BGrammar = {
     Ident e1 = e1.s ;
     IntegerLiteral  e1 = e1.s ;
     Expr2Pred t = t ;
+    oper diffTrans : Str -> Str = \y -> {
+    s = table {  case y of { ( n => N) + (n + ">") => n ++ "is at least zero"}} };
 
 }
