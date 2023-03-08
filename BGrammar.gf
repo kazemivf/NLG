@@ -3,8 +3,10 @@ abstract BGrammar = {
   cat 
     Predicate ;
     Expr ;
+    NPhrase ;
           
   fun 
+    NP  : NPhrase  -> NPhrase -> NPhrase ;
     Not : Predicate -> Predicate ;
     Element : Predicate -> Predicate -> Predicate ;
     Nelement : Predicate -> Predicate -> Predicate ;
